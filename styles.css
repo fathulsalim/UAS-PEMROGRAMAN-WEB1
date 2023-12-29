@@ -1,0 +1,16 @@
+/* CSS untuk mempercantik judul tabel */
+.heading-section {
+    font-size: 24px;
+    color: #fff; /* Warna teks */
+    background-color: #4CAF50; /* Warna latar belakang */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px; /* Padding agar judul lebih berjelas */
+}
+
+/* Optional: Menambahkan efek hover pada judul tabel */
+.heading-section:hover {
+    background-color: #45a049; /* Warna latar belakang saat dihover, dapat disesuaikan */
+    cursor: pointer;
+}
