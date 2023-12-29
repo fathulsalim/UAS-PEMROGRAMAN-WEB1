@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head id="#Registrasi">
+    <title>Registrasi pasien baru</title>
+    <link rel="stylesheet" href="css/styleee.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        <div class="banner">
+          <h1>Form Input Data Pasien Baru</h1>
+        </div>
+        <div class="item">
+          <p>Nama</p>
+          <div class="name-item">
+            <input type="text" name="name" placeholder="First" />
+            <input type="text" name="name" placeholder="Last" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Tanggal konsultasi</p>
+          <input type="date" name="bdate" required/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="question">
+          <p>Jenis Kelamin</p>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="none" id="radio_1" name="gender"/>
+              <label for="radio_1" class="radio"><span>Laki Laki</span></label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="radio_2" name="gender"/>
+              <label for="radio_2" class="radio"><span>Perempuan</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <p>Berat badan</p>
+          <input type="text" name="Kg"/>
+         </div>
+        <div class="item">
+          <p>Tinggi badan</p>
+          <input type="text" name="Kg"/>
+        </div>
+        <div class="item">
+            <p>Golongan darah</p>
+            <select required>
+              <option value="">None</option>
+              <option value="1">A</option>
+              <option value="2">B</option>
+              <option value="3">AB</option>
+              <option value="4">O</option>
+              <option value="4">Lainnya</option>
+            </select>
+        </div>
+        <div class="item">
+          <p>Riwayat penyakit</p>
+          <textarea rows="3"></textarea>
+        </div>
+        <div class="item">
+          <p>Diagnosis awal</p>
+          <textarea rows="3"></textarea>
+        </div>
+        <div class="btn-block">
+          <button type="submit" href="/">Send Application</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

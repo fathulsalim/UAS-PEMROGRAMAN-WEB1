@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daftar pasien baru</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/elusive-webfont.css">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styleee.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    
+    <script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	<script defer src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+	<script defer src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+	<script defer src="script.js"></script>
+  </head>
+
+	<div class="container">
+	<div class="testbox">
+      <form action="/">
+        <div class="banner">
+          <h1>Form Input Data Pasien Baru</h1>
+        </div>
+        <div class="item">
+          <p>Nama</p>
+          <div class="name-item">
+            <input type="text" name="name" placeholder="First" />
+            <input type="text" name="name" placeholder="Last" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Tanggal konsultasi</p>
+          <input type="date" name="bdate" required/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="question">
+          <p>Jenis Kelamin</p>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="none" id="radio_1" name="gender"/>
+              <label for="radio_1" class="radio"><span>Laki Laki</span></label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="radio_2" name="gender"/>
+              <label for="radio_2" class="radio"><span>Perempuan</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <p>Berat badan</p>
+          <input type="text" name="Kg"/>
+         </div>
+        <div class="item">
+          <p>Tinggi badan</p>
+          <input type="text" name="Kg"/>
+        </div>
+        <div class="item">
+            <p>Golongan darah</p>
+            <select required>
+              <option value="">None</option>
+              <option value="1">A</option>
+              <option value="2">B</option>
+              <option value="3">AB</option>
+              <option value="4">O</option>
+              <option value="4">Lainnya</option>
+            </select>
+        </div>
+        <div class="item">
+          <p>Riwayat penyakit</p>
+          <textarea rows="3"></textarea>
+        </div>
+        <div class="item">
+          <p>Diagnosis awal</p>
+          <textarea rows="3"></textarea>
+        </div>
+        <div class="btn-block">
+          <button type="submit" href="">Send Application</button>
+        </div>
+      </form>
+    </div>
+	</div>
+
+	<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Daftar Registrasi Pasien</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="text-center mb-4">Registrasi pasien baru</h4>
+  <div class="container">
+  <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+					        <th>No</th>
+					        <th>Nama Lengkap</th>
+					        <th>Tanggal konsultasi</th>
+					        <th>Jenis Kelamin</th>
+					        <th>Berat badan</th>
+					        <th>Tinggi badan</th>
+					        <th>Gol. Darah</th>
+					        <th>Riwayat penyakit</th>
+					        <th>Diagnosis awal</th>
+                  <th>Aksi</th>
+					      </tr>
+        </thead>
+        <tbody>
+              <tr>
+					        <th scope="row" class="scope">1</th>
+					        <td>Nadia Syarifa</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>57 kg</td>
+                  <td>168 cm</td>
+                  <td>A</td>
+                  <td>Stroke Ringan</td>
+                  <td>Stroke Ringan</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+					      <tr>
+					        <th scope="row" class="scope" >2</th>
+					        <td>Syifaun</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>55 kg</td>
+                  <td>153 cm</td>
+                  <td>A</td>
+                  <td>Stroke Ringan</td>
+                  <td>Stroke Ringan</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >3</th>
+					        <td>Nadifa putri</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>42 kg</td>
+                  <td>145 cm</td>
+                  <td>B</td>
+                  <td>Stroke Ringan</td>
+                  <td>Stroke Ringan</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >4</th>
+					        <td>Annisa</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>52 kg</td>
+                  <td>147 cm</td>
+                  <td>B</td>
+                  <td>Demam Berdarah</td>
+                  <td>Demam Berdarah</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >5</th>
+					        <td>Indriani</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>54 kg</td>
+                  <td>167 cm</td>
+                  <td>B+</td>
+                  <td>TBC</td>
+                  <td>TBC</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >6</th>
+					        <td>Ayu astari</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>44 kg</td>
+                  <td>157 cm</td>
+                  <td>B</td>
+                  <td>TBC</td>
+                  <td>TBC</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >7</th>
+					        <td>Kahiyang ayu</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>49 kg</td>
+                  <td>166 cm</td>
+                  <td>B</td>
+                  <td>TBC</td>
+                  <td>TBC</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >8</th>
+					        <td>Rihanna</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>57 kg</td>
+                  <td>162 cm</td>
+                  <td>AB</td>
+                  <td>TBC</td>
+                  <td>TBC</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >9</th>
+					        <td>Afika ayani</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>51 kg</td>
+                  <td>166 cm</td>
+                  <td>B</td>
+                  <td>STBC</td>
+                  <td>TBC</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >10</th>
+					        <td>Vidya inayah</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>48 kg</td>
+                  <td>169 cm</td>
+                  <td>B</td>
+                  <td>Muntaber</td>
+                  <td>Demam berdarah</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >11</th>
+					        <td>khanifah</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>58 kg</td>
+                  <td>153 cm</td>
+                  <td>B</td>
+                  <td>Hepatitis</td>
+                  <td>Hepatitis</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >12</th>
+					        <td>Rina prakoso</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>67 kg</td>
+                  <td>174 cm</td>
+                  <td>B</td>
+                  <td>Influenza</td>
+                  <td>Flu</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >13</th>
+					        <td>Rahayu maduya</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>57 kg</td>
+                  <td>154 cm</td>
+                  <td>B</td>
+                  <td>TBC</td>
+                  <td>TBC</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >14</th>
+					        <td>Hanum</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>56 kg</td>
+                  <td>167 cm</td>
+                  <td>A</td>
+                  <td>TBC</td>
+                  <td>TBC</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+					        <th scope="row" class="scope" >15</th>
+					        <td>saputri idil</td>
+					        <td>28-desember-2023</td>
+					        <td>Perempuan</td>
+					        <td>42 kg</td>
+                  <td>148 cm</td>
+                  <td>B</td>
+                  <td>Stroke Ringan</td>
+                  <td>Stroke Ringan</td>
+					        <td><a href="#" class="btn btn-primary">delete</a></td>
+					      </tr>
+						    <tr>
+                  <th scope="row" class="scope">16</th>
+                  <td>John Doe</td>
+                  <td>28-desember-2023</td>
+                  <td>Laki-laki</td>
+                  <td>75 kg</td>
+                  <td>170 cm</td>
+                  <td>O</td>
+                  <td>Tidak ada</td>
+                  <td>Hipertensi</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+						    <tr>
+                  <th scope="row" class="scope">17</th>
+                  <td>Jane Smith</td>
+                  <td>28-desember-2023</td>
+                  <td>Perempuan</td>
+                  <td>60 kg</td>
+                  <td>160 cm</td>
+                  <td>B</td>
+                  <td>Diabetes</td>
+                  <td>Asam Lambung</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">18</th>
+                  <td>Joko</td>
+                  <td>28-desember-2023</td>
+                  <td>Laki-laki</td>
+                  <td>68 kg</td>
+                  <td>168 cm</td>
+                  <td>A</td>
+                  <td>-</td>
+                  <td>Batu ginjal</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">19</th>
+                  <td>Grace</td>
+                  <td>28-desember-2023</td>
+                  <td>Perempuan</td>
+                  <td>55 kg</td>
+                  <td>160 cm</td>
+                  <td>O</td>
+                  <td>Asma</td>
+                  <td>ISPA</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">20</th>
+                  <td>Siti sarah</td>
+                  <td>28-desember-2023</td>
+                  <td>Perempuan</td>
+                  <td>52 kg</td>
+                  <td>156 cm</td>
+                  <td>B</td>
+                  <td>Tidak ada</td>
+                  <td>Radang tenggorokan</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>  
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">21</th>
+                  <td>Rudi</td>
+                  <td>28-desember-2023</td>
+                  <td>Laki-laki</td>
+                  <td>70 kg</td>
+                  <td>170 cm</td>
+                  <td>AB</td>
+                  <td>Asma</td>
+                  <td>Sesak napas</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">22</th>
+                  <td>Amanda</td>
+                  <td>28-desember-2023</td>
+                  <td>Perempuan</td>
+                  <td>48 kg</td> 
+                  <td>158 cm</td>
+                  <td>A</td>
+                  <td>Tidak ada</td>
+                  <td>Alergi debu</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td> 
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">23</th>
+                  <td>Firman</td>
+                  <td>28-desember-2023</td>
+                  <td>Laki-laki</td>
+                  <td>80 kg</td>
+                  <td>175 cm</td> 
+                  <td>A</td>
+                  <td>Diabetes</td>
+                  <td>Luka diabetes</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">24</th>
+                  <td>Wati</td> 
+                  <td>28-desember-2023</td>
+                  <td>Perempuan</td>
+                  <td>65 kg</td>
+                  <td>162 cm</td>
+                  <td>O</td>
+                  <td>Hipertensi</td>
+                  <td>Nyeri dada</td> 
+                  <td><a href="#" class="btn btn-primary">delete</a></td>  
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">25</th>
+                  <td>Michael Andrew</td>
+                  <td>28-desember-2023</td>
+                  <td>Laki-laki</td>
+                  <td>82 kg</td>
+                  <td>178 cm</td>
+                  <td>A</td>
+                  <td>Tidak ada</td>
+                  <td>Asam urat</td> 
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">26</th>
+                  <td>Jennifer Lawrence</td>
+                  <td>28-desember-2023</td>
+                  <td>Perempuan</td>
+                  <td>55 kg</td>
+                  <td>165 cm</td>
+                  <td>O</td>
+                  <td>Tidak ada</td>
+                  <td>Alergi makanan laut</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">27</th>
+                  <td>Ahmad Syafiq</td>
+                  <td>28-desember-2023</td>
+                  <td>Laki-laki</td>
+                  <td>70 kg</td>
+                  <td>175 cm</td>
+                  <td>A</td>
+                  <td>Diabetes</td>
+                  <td>Flu</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">28</th>
+                  <td>Siti Nurul</td>
+                  <td>28-desember-2023</td>
+                  <td>Perempuan</td>
+                  <td>60 kg</td>
+                  <td>160 cm</td>
+                  <td>B</td>
+                  <td>Asma</td>
+                  <td>Migrain</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                   <th scope="row" class="scope">29</th>
+                  <td>Dwi Prasetyo</td>
+                  <td>28-desember-2023</td>
+                  <td>Laki-laki</td>
+                  <td>80 kg</td>
+                  <td>180 cm</td>
+                  <td>AB</td>
+                  <td>Hipertensi</td>
+                  <td>Back Pain</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">30</th>
+                  <td>Ani Fitriani</td>
+                  <td>28-desember-2023</td>
+                  <td>Perempuan</td>
+                  <td>55 kg</td>
+                  <td>165 cm</td>
+                  <td>O</td>
+                  <td>Asam Urat</td>
+                  <td>Asam Urat</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="scope">31</th>
+                  <td>Rifqi Pratama</td>
+                  <td>28-desember-2023</td>
+                  <td>Laki-laki</td>
+                  <td>75 kg</td>
+                  <td>175 cm</td>
+                  <td>B</td>
+                  <td>Maag</td>
+                  <td>Maag akut</td>
+                  <td><a href="#" class="btn btn-primary">delete</a></td>
+                </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+					        <th>No</th>
+					        <th>Nama Lengkap</th>
+					        <th>Tanggal konsultasi</th>
+					        <th>Jenis Kelamin</th>
+					        <th>Berat badan</th>
+					        <th>Tinggi badan</th>
+					        <th>Gol. Darah</th>
+					        <th>Riwayat penyakit</th>
+					        <th>Diagnosis awal</th>
+					      </tr>
+        </tfoot>
+    </table>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+  </body>
+</html>
